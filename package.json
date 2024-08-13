@@ -1,0 +1,11 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "generate-components": "node generateIconComponents.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10"
+  }
+}

@@ -1,0 +1,23 @@
+
+  import React, { SVGProps } from "react";
+import { useTheme } from "styled-components";
+
+const ReceiveDocuments = ({ color, width = 24, height = 24, ...props } : SVGProps<SVGSVGElement>) => {
+  const { iconColor } = useTheme();
+
+  return (
+    <svg
+    color={color ? color : iconColor}
+    width={width}
+    height={height}
+    viewBox="0 0 24 24"
+    {...props}
+    dangerouslySetInnerHTML={{ __html: `
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M16 14C16 13.4477 15.5523 13 15 13H5V6.1738L10.3491 10.7588C10.7235 11.0804 11.2765 11.0804 11.6509 10.7588L17 6.1738V10C17 10.5523 17.4477 11 18 11C18.5523 11 19 10.5523 19 10V4C19 3.44772 18.5523 3 18 3H4C3.44772 3 3 3.44772 3 4V14C3 14.5523 3.44772 15 4 15H15C15.5523 15 16 14.5523 16 14ZM21.6947 16.293C21.5073 16.1054 21.2529 16 20.9877 16C20.7225 16 20.4682 16.1054 20.2807 16.293L18.9877 17.5859V13C18.9877 12.4477 18.54 12 17.9877 12C17.4354 12 16.9877 12.4477 16.9877 13V17.5859L15.6947 16.293C15.3023 15.914 14.6786 15.9194 14.2929 16.3052C13.9072 16.6909 13.9017 17.3146 14.2807 17.707L17.2807 20.707C17.4682 20.8946 17.7225 21 17.9877 21C18.2529 21 18.5072 20.8946 18.6947 20.707L21.6947 17.707C21.8823 17.5196 21.9877 17.2652 21.9877 17C21.9877 16.7348 21.8823 16.4804 21.6947 16.293ZM11 8.6826L6.7031 5H15.2969L11 8.6826Z" fill="currentColor"/>
+  ` }}
+  />
+  )
+};
+
+export default ReceiveDocuments;
+  
